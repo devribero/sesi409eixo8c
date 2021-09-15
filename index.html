@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Cronometro</title>
 </head>
 
@@ -14,7 +15,7 @@
     }
 
     body {
-        background-color: #111;
+        background-color: #8B8989;
     }
 
     .max-width {
@@ -66,6 +67,19 @@
 </style>
 
 <body>
+    <img class="sesi" src="sesi-logo.png">
+    <div class="gerarcrono">
+    <button onclick="gerar()">Gerar</button><br />
+    Gerado: <div id="resp"></div>
+   
+    <script type="text/javascript">
+     function gerar()
+     {
+       var resp = document.getElementById('resp');
+       resp.innerHTML = Math.floor(6* Math.random());
+     }
+    </script>
+    </div>
 
     <div class="max-width">
         <button onclick="start();" class="bg-green">Iniciar</button>
@@ -74,16 +88,6 @@
         <h1 id="counter">00:00:00</h1>
     </div>
 <script src="cron.js"></script>
- <button onclick="gerar()">Gerar</button><br />
- Gerado: <div id="resp"></div>
-
- <script type="text/javascript">
-  function gerar()
-  {
-    var resp = document.getElementById('resp');
-    resp.innerHTML = Math.floor(6* Math.random());
-  }
- </script>
 </body>
 
 </html>
